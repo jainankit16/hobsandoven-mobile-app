@@ -1,0 +1,52 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Rediger profil</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background: #f9fbfb;">
+
+  <div class="middle_content">
+    <div class="center_content">
+        <div style="width:100%;text-align: center;margin-top: 15px;">
+          <img (click)="openActionSheet('1')" class="profile_image" [src]="editProfileParams.profile_picture" />
+        </div>
+        <ion-list>
+          <ion-item class="not_filled"  [ngClass]="[editProfileParams.name !='' ? 'filled' : '']">
+            <ion-label floating>Navn</ion-label>
+            <ion-input type="text"  [(ngModel)]="editProfileParams.name"></ion-input>
+          </ion-item>
+
+          <ion-item class="not_filled"  [ngClass]="[editProfileParams.email !='' ? 'filled' : '']">
+            <ion-label floating>E-mail</ion-label>
+            <ion-input type="email"  [(ngModel)]="editProfileParams.email" disabled></ion-input>
+          </ion-item>
+
+          <ion-item class="not_filled"  [ngClass]="[editProfileParams.phone !='' ? 'filled' : '']">
+            <ion-label floating>Tlf.nr.</ion-label>
+            <ion-input type="number"  [(ngModel)]="editProfileParams.phone"></ion-input>
+          </ion-item>
+
+          <ion-item class="address_input">
+            <ion-label floating>Adresse</ion-label>
+            <ion-input type="text" [(ngModel)]="editProfileParams.address"></ion-input>
+          </ion-item>
+
+        </ion-list>
+        
+        <ion-label (click)="openActionSheet('2')" class="add_certificate_lbl">Tilføj hygiejnebevis</ion-label>
+        <ion-label  class="certificate_lbl" *ngIf="isCertificateAdded" >Certificate.jpg</ion-label>
+
+    </div>
+  </div>
+
+
+</ion-content>
+<ion-footer (click)="saveProfile()" no-shadow>
+  <ion-toolbar position="bottom">
+    <button ion-button full>GEM</button>
+  </ion-toolbar>
+</ion-footer>

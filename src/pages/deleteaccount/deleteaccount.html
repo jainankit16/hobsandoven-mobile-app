@@ -1,0 +1,21 @@
+<ion-content padding padding class="sample-modal-page logout_main">
+  <ion-icon class="cross_icon" (click)="closeModel()" name="close-circle"></ion-icon>
+
+  <ion-item style="margin-top:10%;">
+    <ion-label class="logout_lbl">Slet profil?</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Din profil bliver slettet permanent og du vil miste alle gemte data. Er du sikker på at du ønsker at slette
+      din profil ?
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label (click)="dontDeleteAccount()" class="delete_account_lbl">Nej, slet ikke min profil </ion-label>
+  </ion-item>
+
+  <ion-toolbar position="bottom">
+    <button class="btn_logout" (click)="deleteAccount()" ion-button full>Ja, slet min profil</button>
+  </ion-toolbar>
+</ion-content>

@@ -1,0 +1,35 @@
+page-addmoreinfo {
+    .footer .button-ios{
+        margin-bottom: 0px!important;
+        background-color: #16d36e!important;
+        height: 50px!important;
+    }
+    .footer .toolbar-ios{
+        padding: 0px!important;
+    }
+    .footer .toolbar-md{
+        padding: 0px!important;
+    }
+    .footer .button-md{
+        margin-bottom: 0px!important;
+        background-color: #16d36e!important;
+        height: 50px!important;
+        text-transform: none;
+    }
+
+    .moreinfo_item{
+        background-color: transparent;
+    }
+    .list-ios .item-block .item-inner{
+        border-bottom: 1px solid #eff3f3!important;
+    }
+    .list-md .item-block .item-inner{
+        border-bottom: 1px solid #eff3f3!important;
+    }
+    .list-ios > .item-block:first-child{
+        border-top: 1px solid #eff3f3!important;
+    }
+    .list-md > .item-block:first-child{
+        border-top: 1px solid #eff3f3!important;
+    }
+}

@@ -1,0 +1,82 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Opret måltid</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background: #f9fbfb;">
+
+  <div class="middle_content">
+    <div class="center_content">
+      <div style="width:100%;height: auto;margin-left: 16px;margin-top: 45px;margin-bottom: 45px;margin-right: 16px;">
+        <ion-label style="font-size: 17px;font-weight: bold;">Yderligere info</ion-label>
+      </div>
+      <ion-list>
+
+        <ion-item class="moreinfo_item">
+          <ion-label>Indeholder fuldkorn</ion-label>
+          <ion-toggle (ionChange)="onMoreSelected($event,1,'Indeholder fuldkorn')" [checked]="meal_content.contains_whole_grains"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="moreinfo_item">
+          <ion-label>Delvist økologisk</ion-label>
+          <ion-toggle (ionChange)="onMoreSelected($event,2,'Delvist økologisk')" color="energized" [checked]="meal_content.partially_organic"></ion-toggle>
+        </ion-item>
+        <ion-item class="moreinfo_item">
+          <ion-label>100% økologisk</ion-label>
+          <ion-toggle (ionChange)="onMoreSelected($event,3,'100% økologisk')" color="energized" [checked]="meal_content.hund_per_organic"></ion-toggle>
+        </ion-item>
+        <ion-item class="moreinfo_item">
+          <ion-label>Indeholder ikke mejeriprodukter</ion-label>
+          <ion-toggle (ionChange)="onMoreSelected($event,4,'Indeholder ikke mejeriprodukter')" color="energized" [checked]="meal_content.doesnt_contain_dairy_products"></ion-toggle>
+        </ion-item>
+        <ion-item class="moreinfo_item">
+          <ion-label>Sukkerfrit</ion-label>
+          <ion-toggle (ionChange)="onMoreSelected($event,5,'Sukkerfrit')" color="energized" [checked]="meal_content.sugarfree"></ion-toggle>
+        </ion-item>
+        <ion-item class="moreinfo_item">
+          <ion-label>Fedtfattigt</ion-label>
+          <ion-toggle (ionChange)="onMoreSelected($event,6,'Fedtfattigt')" color="energized" [checked]="meal_content.low_fat"></ion-toggle>
+        </ion-item>
+        <ion-item class="moreinfo_item">
+          <ion-label>Rig på proteiner</ion-label>
+          <ion-toggle (ionChange)="onMoreSelected($event,7,'Rig på proteiner')" color="energized" [checked]="meal_content.rich_in_protiens"></ion-toggle>
+        </ion-item>
+        <ion-item class="moreinfo_item">
+          <ion-label>Glutenfri</ion-label>
+          <ion-toggle (ionChange)="onMoreSelected($event,8,'Glutenfri')" color="energized" [checked]="meal_content.gluten"></ion-toggle>
+        </ion-item>
+        <ion-item class="moreinfo_item">
+          <ion-label>Indeholder ikke nødder</ion-label>
+          <ion-toggle  (ionChange)="onMoreSelected($event,9,'Indeholder ikke nødder')" color="energized" [checked]="meal_content.doesnt_contain_nuts"></ion-toggle>
+        </ion-item>
+        <ion-item class="moreinfo_item">
+          <ion-label>Indeholder ikke kød</ion-label>
+          <ion-toggle (ionChange)="onMoreSelected($event,10,'Indeholder ikke kød')" color="energized" [checked]="meal_content.doesnt_contain_meat"></ion-toggle>
+        </ion-item>
+        <ion-item class="moreinfo_item">
+          <ion-label>Indeholder ikke æg</ion-label>
+          <ion-toggle (ionChange)="onMoreSelected($event,11,'Indeholder ikke æg')" color="energized" [checked]="meal_content.doesnt_contain_egg"></ion-toggle>
+        </ion-item>
+        <ion-item class="moreinfo_item">
+          <ion-label>Indeholder ikke skalddyr</ion-label>
+          <ion-toggle (ionChange)="onMoreSelected($event,12,'Indeholder ikke skalddyr')" color="energized" [checked]="meal_content.doesnt_contain_sellfish"></ion-toggle>
+        </ion-item>
+        <ion-item class="moreinfo_item">
+          <ion-label>100% halal</ion-label>
+          <ion-toggle (ionChange)="onMoreSelected($event,13,'100% halal')" color="energized" [checked]="meal_content.hund_per_halal"></ion-toggle>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+
+
+</ion-content>
+<ion-footer (click)="submitClickFunc()" no-shadow>
+  <ion-toolbar position="bottom">
+    <button ion-button full>Næste</button>
+  </ion-toolbar>
+</ion-footer>

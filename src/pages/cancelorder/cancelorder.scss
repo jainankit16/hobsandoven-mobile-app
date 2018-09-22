@@ -1,0 +1,70 @@
+page-cancelorder {
+    .ion-page.show-page {
+        position: relative!important;
+       
+    }
+
+    .logout_main{
+      box-shadow: 0px 5px 21px 0px rgba(0, 0, 0, 0.08);
+      background: #fff;
+      position: absolute;
+      left: 50%;
+      top: 50%;  
+      height: 40%;
+      width: 96%;
+      border-radius: 20px;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+    
+    }
+
+    .logout_main .cross_icon{
+      display: inline-block;
+      font-size: 22px;
+      color: #16d36e;
+      position: absolute;
+      right: 13px;
+      top: 13px;
+      z-index: 1;
+    }
+    .logout_main .item .item-inner{
+        text-align: center;
+        border-bottom:0px!important;
+    }
+    .logout_main .scroll-content{
+        padding: 0px!important;
+    }
+    .logout_main .toolbar{
+      padding: 0px!important;
+      padding-left: 0px;
+      padding-right: 0px;
+      position: absolute;
+      bottom: 0;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+    .logout_lbl{
+      color: #000;
+      font-weight: bold;
+    }
+    .delete_account_lbl{
+        color:#16d36e;
+    }
+    .btn_logout{
+        background-color: #ed1c24;
+        margin: 0px!important;
+        text-transform: unset;
+        height: 50px!important;
+        
+    }
+    .logout_main .toolbar .toolbar-content-md{
+      bottom: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    .cancel_reason ion-input .text-input{
+        text-align: center!important;
+    }
+}

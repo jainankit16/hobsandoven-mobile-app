@@ -1,0 +1,132 @@
+page-createmeal {
+    .footer .button-ios{
+        margin-bottom: 0px!important;
+        background-color: #16d36e!important;
+        height: 50px!important;
+    }
+    .footer .toolbar-ios{
+        padding: 0px!important;
+    }
+    .footer .toolbar-md{
+        padding: 0px!important;
+    }
+    .footer .button-md{
+        margin-bottom: 0px!important;
+        background-color: #16d36e!important;
+        height: 50px!important;
+        text-transform: none;
+    }
+    ion-item.not_filled::after{
+        content: "";
+        background: #969696;
+        width: 8px;
+        border-radius: 50%;
+        height: 8px;
+        position: absolute;
+        top: 19px;
+        right: 0;
+        margin-right: 10px;
+    }
+    ion-item.filled::after{
+        background: #16d36e!important;
+        margin-right: 10px;
+    }
+    ion-item{
+        background-color: #f9fbfb!important;
+    }
+
+    .list-ios .item-block .item-inner{
+        border-bottom: 1px solid #eff3f3!important;
+    }
+    .list-md .item-block .item-inner{
+        border-bottom: 1px solid #eff3f3!important;
+    }
+    .list-md .item-input:last-child{
+        border-bottom: 0px!important;
+    }
+    ion-label{
+        font-size: 14px;
+        color:#000;
+    }
+    .meal_image{
+        width:85px;
+        height:110px;
+        border-radius: 10%;
+    }
+    .list-ios > .item-block:first-child{
+        border-top: 1px solid #eff3f3!important;
+    }
+    .list-md > .item-block:first-child{
+        border-top: 1px solid #eff3f3!important;
+    }
+    .input-has-focus .label-md[stacked]{
+        color:#000;
+    }
+    .label[stacked] {
+        font-size: 1.2rem;
+        color: #000;
+    }
+    .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner{
+        box-shadow: unset!important;
+    }
+    .item-md.item-input.input-has-focus .item-inner{
+        box-shadow: unset!important;
+    }
+    .item-md.item-input.input-has-focus:last-child{
+        box-shadow: unset!important;
+    }
+    .list-md .item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child, .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child{
+        box-shadow: unset!important;
+    }
+    .meal_name .item-inner{
+        border-bottom: none!important;
+    }
+
+    //for nutritions block
+    .card_main{
+        border-radius: 5%;
+        height: 200px; 
+        border-top: 1px solid #eff3f3;
+        border-left: 1px solid #eff3f3;
+    }
+    .card_main ion-label{
+        margin: 0px;
+    }
+    .card_main ion-input{
+        height: 20px;
+    }
+    .card_main input{
+        margin: 0px;
+    }
+    .card_main ion-card-content{
+        padding: 0px;
+    }
+    .card_main ion-row{
+      height: 40px;
+      line-height: 30px;
+      border-bottom: 1px solid #eff3f3;
+    }
+    .card_main ion-grid{
+        padding: 0px;
+    }
+    .card_main ion-col{
+        border-right: 1px solid #eff3f3;
+    }
+    .card_main ion-label{
+        font-size: 13px;
+        margin-left:10px;
+    }
+    ion-textarea .text-input{
+        color: #000!important;
+        opacity: 1!important;
+    }
+    ion-input .text-input{
+        color: #000!important;
+        opacity: 1!important;
+    }
+    
+    //action sheet
+    
+    //
+
+}

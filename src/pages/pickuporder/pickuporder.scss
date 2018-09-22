@@ -1,0 +1,150 @@
+page-pickuporder {
+    .back-button{
+        display: none!important;
+    }
+    .feed_map_span_main{
+        padding-left: 0px;
+    }
+    .feed_map_span_main ion-label{
+        position: relative;
+    }
+    .feed_map_span_main .item-inner .input-wrapper ion-label{
+        margin: 0px;
+        height: 44px;
+        margin: 10px 0px;
+    }
+    .feed_map_span_main .item-inner{
+        padding-right: 0px!important;
+    }
+    .feed_map_span_main .item-inner{
+        border-bottom: 0px!important;
+    }
+    .close_menu_icon{
+        float: left;
+        text-align: left;
+        width: 15%;
+        display: block!important;
+    }
+    .tiitle_div{
+        width:70%;
+        overflow:hidden;
+        padding:3px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        font-size:2rem;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .login-signup-main{
+        padding: 0px 10px;
+      }
+
+      .meal_image{
+        border-radius: 10%;
+    }
+    .card {
+        width: 100%!important;
+        margin: 0px 0px 15px 0px!important;
+        padding: 10px 0px;
+        box-shadow: 0px 4px 10px 0px rgba(1, 1, 1, 0.4);
+    }
+
+    .card-content{
+        padding: 0px!important;
+    }
+
+    .meal_cat_lbl{
+        float: left;
+        margin-left: 13px;
+        font-size: 12px;
+        color: #969696;
+    }
+    .time_watch_img img{
+        width:15px;
+        height:15px;
+    } 
+    .spoon_img img{
+        width:15px;
+        height:24px;
+    } 
+    .user_img img{
+        width:15px;
+        height: auto;
+        
+    } 
+    .username_txt{
+        margin-top: 5px;
+        font-weight: bold;
+    }
+
+    .header_lite_title .toolbar-title{
+        font-size: 13px;
+        color: #969696;
+        text-align: left;
+        margin-bottom: 2px;
+        padding-left: 15px;
+    }
+    .header_lite_title_below .toolbar-title{
+        font-size: 13px;
+        color: #969696;
+        text-align: left;
+        margin-bottom: 2px;
+        padding-left: 5px;
+    }
+    .one_dag .toolbar-title{
+        font-size:25px;
+        font-weight: bold;
+        text-align: left;
+        padding-left: 15px;
+    }
+    .one_dag_below .toolbar-title{
+        font-size:25px;
+        font-weight: bold;
+        text-align: left;
+        padding-left: 5px;
+    }
+    .price_total .toolbar-title{
+        font-size:25px;
+        font-weight: bold;
+        text-align: left;
+        padding-left: 15px;
+        color: #16d36e;
+    }
+    .tittle_meal {
+        font-size: 19px;
+        margin-bottom: 5px;
+    }
+.boxs{
+    display: inline-block;
+    width:100%;
+    margin-bottom:15px;
+}
+.meal_detail_grid{
+    margin-bottom: 20px;
+}
+    .dish_card_user_img, .dish_card_user_img img{
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 6px 18px 0px rgba(1, 1, 1, 0.5);
+        width:80px;
+        height: 80px;
+        overflow: hidden;
+    }
+    .meal_detail_inner_grid{
+        margin-left: 10px;
+    }
+    .text_align {
+        margin-left: 11px;
+    }
+    ion-row.align_row.row {
+        margin-bottom: 5px;
+    }
+    // .show_road{
+    //     color: #16d36e;
+    //     padding-left: 5px;
+    // }
+
+}

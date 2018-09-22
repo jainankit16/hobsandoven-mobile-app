@@ -1,0 +1,33 @@
+<ion-content padding padding class="sample-modal-page logout_main">
+  <ion-icon class="cross_icon" (click)="closeModel()" name="close-circle"></ion-icon>
+
+  <ion-item style="margin-top:10%;">
+    <ion-label class="logout_lbl">Bedøm din oplevelse</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <div>
+      <div style="width:100%; height:100%; float: left;margin-left: 5px;">
+        <img class="meal_image" width="70" height="90" src="assets/img/man.png" />
+      </div>
+    </div>
+  </ion-item>
+
+  <ion-item>
+    Stars
+  </ion-item>
+
+  <ion-item (click)="notNow()" class="not_now">
+    Ikke nu
+  </ion-item>
+
+  <ion-item class="comments_input">
+    <ion-label stacked>Beskriv din oplevelse</ion-label>
+    <ion-input placeholder="Skriv noget her ..." type="text" [(ngModel)]="rateOrderParam.comments"></ion-input>
+  </ion-item>
+
+  <ion-toolbar position="bottom">
+    <button [ngClass]="[rateOrderParam.rating !='' ? 'btn_rate_after' : 'btn_rate_before']" (click)="rateOrder()" ion-button
+      full>Bedøm</button>
+  </ion-toolbar>
+</ion-content>

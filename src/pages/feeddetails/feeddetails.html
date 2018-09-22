@@ -1,0 +1,192 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-item class="feed_map_span_main">
+
+      <div class="home_main_header_div">
+        <div (click)="closeDetail()" class="close_menu_icon">
+          <img style="margin-top: 10px;" width="21" height="22" src="assets/img/close.png">
+        </div>
+      </div>
+    </ion-item>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background: #f9fbfb;">
+  <ion-grid>
+    <ion-row class="header_img">
+      <img [src]="mealData.image" />
+    </ion-row>
+    <div class="main_content">
+      <ion-row>
+        <ion-title class="dish_title">
+          <h1>{{mealData.meal_title}}</h1>
+        </ion-title>
+      </ion-row>
+      <ion-row>
+        <div class="list_div">
+          <div class="list_time_img">
+            <img src="assets/img/time_watch.png" />
+          </div>
+          <div class="list_text">
+            {{mealData.pickup_datetime}} - {{mealData.pickup_endtime}}
+          </div>
+        </div>
+        <div class="list_div">
+          <div class="list_time_img">
+            <img src="assets/img/meal_map_black.png" />
+          </div>
+          <div class="list_text">
+            {{mealData.pickup_address}}
+          </div>
+        </div>
+      </ion-row>
+      <ion-row>
+        <div class="list_div">
+          <div class="list_time_img">
+            <img src="assets/img/meal_user_black.png" />
+          </div>
+          <div class="list_text">
+            {{mealData.price_per_serving}} kr
+          </div>
+        </div>
+        <div class="list_div">
+          <div class="list_time_img">
+            <img src="assets/img/gram_black.png" />
+          </div>
+          <div class="list_text">
+            {{mealData.weight_per_serving}} g
+          </div>
+        </div>
+        <div class="list_div">
+          <div class="list_time_img">
+            <img src="assets/img/spoon_meal.png" />
+          </div>
+          <div class="list_text">
+            {{mealData.no_of_servings}} portioner
+          </div>
+        </div>
+      </ion-row>
+      <ion-row class="para_p">
+        <p>{{mealData.meal_description}}</p>
+      </ion-row>
+      <ion-row class="chips">
+        <span *ngIf="mealData.contains_whole_grains == 'true'">Indeholder fuldkorn</span>
+        <span *ngIf="mealData.partially_organic == 'true'">Delvist økologisk</span>
+        <span *ngIf="mealData.hund_per_organic == 'true'">100% økologisk</span>
+        <span *ngIf="mealData.doesnt_contain_dairy_products == 'true'">Indeholder ikke mejeriprodukter</span>
+        <span *ngIf="mealData.sugarfree == 'true'">Sukkerfrit</span>
+        <span *ngIf="mealData.low_fat == 'true'">Fedtfattigt</span>
+        <span *ngIf="mealData.rich_in_protiens == 'true'">Rig på proteiner</span>
+        <span *ngIf="mealData.gluten == 'true'">Glutenfri</span>
+        <span *ngIf="mealData.doesnt_contain_nuts == 'true'">Indeholder ikke nødder</span>
+        <span *ngIf="mealData.doesnt_contain_meat == 'true'">Indeholder ikke kød</span>
+        <span *ngIf="mealData.doesnt_contain_egg == 'true'">Indeholder ikke æg</span>
+        <span *ngIf="mealData.doesnt_contain_sellfish == 'true'">Indeholder ikke skalddyr</span>
+        <span *ngIf="mealData.hund_per_halal == 'true'">100% halal</span>
+
+      </ion-row>
+      <ion-row>
+        <ion-list style="width: 75%;">
+          <ion-card class="card_main animated flipInX">
+            <ion-card-content>
+              <ion-grid>
+                <ion-row>
+                  <ion-col col-4>
+
+                  </ion-col>
+                  <ion-col col-8>
+                    <ion-label>Pr. 100 g.</ion-label>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col col-4>
+                    <ion-label>Kalorier</ion-label>
+                  </ion-col>
+                  <ion-col col-8>
+                    <ion-label>{{mealData.calories}} Kcal</ion-label>
+
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col col-4>
+                    <ion-label>Fedt</ion-label>
+                  </ion-col>
+                  <ion-col col-8>
+                    <ion-label>{{mealData.fat}} g.</ion-label>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col col-4>
+                    <ion-label>Kulhydrat</ion-label>
+                  </ion-col>
+                  <ion-col col-8>
+                    <ion-label>{{mealData.carbohydrates}} g.</ion-label>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col col-4>
+                    <ion-label>Protein</ion-label>
+                  </ion-col>
+                  <ion-col col-8>
+                    <ion-label>{{mealData.proteins}} g.</ion-label>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card-content>
+          </ion-card>
+
+        </ion-list>
+      </ion-row>
+      <ion-row>
+        <ion-grid style="margin-top:5px;padding-bottom:opx;padding-left:0px!important;">
+          <ion-row>
+            <ion-col class="no-padding" col-3>
+              <div class="dish_card_user_img">
+                <img src="assets/img/man.png" />
+              </div>
+            </ion-col>
+            <ion-col col-9>
+              <ion-grid class="user_grid">
+                <ion-row>
+                  <h3>
+                    Kesper
+                  </h3>
+                </ion-row>
+                <ion-row>
+                  Rating
+                </ion-row>
+              </ion-grid>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-row>
+      <ion-row class="quanity_margin">
+        <div class="quanity_main first_main">
+          {{orderParams.quantity}} portioner
+        </div>
+        <div class="quanity_main second_main">
+          {{totalprice}} DKK
+        </div>
+        <div class="quanity_main third_main">
+          <span (click)="minusClick()" class="minus_btn">-</span>
+          <span (click)="plusClick()" class="plus_btn">+</span>
+        </div>
+      </ion-row>
+      <ion-row>
+        <ion-item class="not_filled item_input" [ngClass]="[orderParams.pickuptime !='' ? 'filled' : '']">
+          <ion-label stacked>Hvornår ønsker du at afhente måltidet?</ion-label>
+          <ion-datetime placeholder="Vælg tidspunkt" displayFormat="HH:mm" [(ngModel)]="orderParams.pickuptime" pickerFormat="HH mm"></ion-datetime>
+        </ion-item>
+      </ion-row>
+    </div>
+  </ion-grid>
+</ion-content>
+<ion-footer no-shadow>
+  <ion-toolbar (click)="placeOrder()" position="bottom">
+    <!-- <img src="assets/img/wp.png"/> -->
+    <button ion-button full>Bestil</button>
+  </ion-toolbar>
+</ion-footer>

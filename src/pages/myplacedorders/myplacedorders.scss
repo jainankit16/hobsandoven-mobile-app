@@ -1,0 +1,123 @@
+page-myplacedorders {
+    .isSelected{
+        color:#000000;
+        font-weight: bold;
+    }
+    .noSelected{
+        color:#E7E9E9;
+    }
+
+    .btn-label{
+        width: auto;
+        margin-right: 30px!important;    
+        font-size: 20px;
+        display: inline-block;           
+    }
+    .btn-label-signup{
+        // margin: 100px -10px 11px 10px;
+        margin: 22px 9px 12px -4px;
+    }
+    ion-label{
+        overflow: initial!important;
+      }
+
+    .main_btn{
+        overflow-x: auto;
+        width: 100%;
+        overflow-y: hidden;
+        padding-left: 10px;
+        padding-right: 10px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        display: inline-block;
+        overflow: auto;
+        white-space: nowrap;
+      }
+
+      .slides_height{
+        min-height: 512px;
+        height: 512px;
+    }
+
+    .slide-zoom {   
+        top: 0;
+        position: absolute;
+    }
+
+    .login-signup-main{
+        padding: 0px 10px;
+      }
+
+      .meal_image{
+        border-radius: 10%;
+    }
+    .card {
+        width: 100%!important;
+        margin: 0px 0px 15px 0px!important;
+        border-radius: 15px!important;
+        box-shadow: 0px 4px 10px 0px rgba(1, 1, 1, 0.4);
+    }
+
+    .card-content{
+        padding: 0px!important;
+    }
+
+    .time_watch_img img{
+        width:15px;
+        height:15px;
+        margin-top:5px;
+    } 
+    .spoon_img img{
+        width:15px;
+        height:24px;
+    } 
+    .user_img img{
+        width:15px;
+        height:15px;
+        
+    } 
+    .not_accept_txt{
+        margin-top: 5px;
+        color: #ed1c24;
+    }
+    .accept_txt{
+        margin-top: 5px;
+        color: #16d36e;
+    }
+    .amount_txt{
+        font-weight: bold;
+        color: #2ec95c;
+    }
+    .time_watch_img,.spoon_img{
+       display: inline-block;
+       min-height: 24px;
+    }
+    .tittle_meal{
+        font-size:2rem;
+        font-weight: 600;
+    }
+    .align_row{
+        min-height: 25px;
+        width: 100%;
+        position: relative;
+        text-align: left;
+    }
+    .text_align{
+        margin-left: 5px;
+        position: absolute;
+        top:3px;
+        margin-left:19px;
+        display: inline-block;
+        font-size:1.5rem;
+        
+    }
+    .dish_card_user_img img{
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 6px 18px 0px rgba(1, 1, 1, 0.5);
+        width:60px;
+        height: 60px;
+        overflow: hidden;
+    }
+    
+}

@@ -1,0 +1,98 @@
+<ion-content style="background: #f9fbfb;">
+  <div class="login_main_btn" [ngClass]="[keyboard.isOpen() ? 'login_main_btn_open' : '']">
+    <ion-label class="btn-label btn-label-signup" [ngClass]="[isSignUp ? 'isSelected' : 'noSelected']" (click)="signup()">TilmeId</ion-label>
+    <ion-label class="btn-label" [ngClass]="[isLogin ? 'isSelected' : 'noSelected']" (click)="login()">Log ind</ion-label>
+    <ion-label class="btn-label" [ngClass]="[isForgot ? 'isSelected' : 'noSelected']" (click)="forgot()">Glemt kodeord</ion-label>
+  </div>
+
+
+
+  <div class="slides_height">
+    <ion-slides (ionSlideDidChange)="slideChanged()">
+      <ion-slide>
+        <ion-list class="login-signup-main">
+
+          <div style="padding: 0px 20px;">
+            <button ion-button block class="button button-royal btn-facebook" (click)="facebookSubmit()">
+              <ion-img class="facebook-image" src="assets/img/facebook.png"></ion-img>
+              Log in med Facebook</button>
+          </div>
+          <ion-label class="or_lbl">Eller</ion-label>
+
+          <ion-item class="custom-field">
+            <ion-input class="input-field" [(ngModel)]="signupparams.name" type="text" placeholder="Navn"></ion-input>
+          </ion-item>
+
+          <ion-item class="custom-field">
+            <ion-input type="email" [(ngModel)]="signupparams.email" placeholder="E-mail"></ion-input>
+          </ion-item>
+
+          <ion-item class="custom-field">
+            <ion-input type="password" [(ngModel)]="signupparams.password" placeholder="Kodeord"></ion-input>
+          </ion-item>
+
+          <ion-item class="custom-field">
+            <ion-input type="password" [(ngModel)]="confirmPassword" placeholder="Bekræft kodeord"></ion-input>
+          </ion-item>
+
+          <ion-item class="checkbox_item">
+            <ion-label class="custom_label_terms lbl_grey">Jeg accepterer</ion-label>
+            <ion-label class="custom_label_terms terms_click_btn" (click)="termsFunc()">vilkår</ion-label>
+            <ion-label class="custom_label_terms lbl_grey">og</ion-label>
+            <ion-label class="custom_label_terms terms_click_btn" (click)="privacyFunc()">betingelser</ion-label>
+            <ion-checkbox class="custom-checkbox" [checked]="cbChecked" (ionChange)="updateTerms($event)"></ion-checkbox>
+          </ion-item>
+        </ion-list>
+      </ion-slide>
+      <ion-slide>
+        <ion-list class="login-signup-main">
+          <div style="padding: 0px 20px;">
+            <button ion-button block class="button button-royal btn-facebook" (click)="facebookSubmit()">
+              <ion-img class="facebook-image" src="assets/img/facebook.png"></ion-img>
+              Log in med Facebook</button>
+          </div>
+          <ion-label class="or_lbl">Eller</ion-label>
+
+          <ion-item class="custom-field">
+            <ion-input type="email" [(ngModel)]="loginparams.email" placeholder="E-mail"></ion-input>
+          </ion-item>
+
+          <ion-item class="custom-field">
+            <ion-input type="password" [(ngModel)]="loginparams.password" placeholder="Kodeord"></ion-input>
+          </ion-item>
+
+          <ion-label class="forgot_lbl" (click)="showForgot()">Glemt kodeord ?</ion-label>
+
+        </ion-list>
+      </ion-slide>
+      <ion-slide>
+        <ion-list class="login-signup-main">
+          <div style="padding: 0px 20px;" class="btn-facebook-copy">
+
+          </div>
+          <ion-item class="custom-field">
+            <ion-input type="email" [(ngModel)]="forgotpasswordparam.email" placeholder="E-mail"></ion-input>
+          </ion-item>
+          <button ion-button block (click)="forgotPassword()" class="button button_submit">Nulstil kodeord</button>
+        </ion-list>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+
+  <ion-fab center bottom *ngIf="!isForgot">
+    <button ion-fab color="secondary" (click)="submitLoginSingup()">
+      <ion-icon name="arrow-round-forward"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <div *ngIf="isLoader" class="spinner_main">
+    <div class="spinner_middle">
+      <div class="spinner">
+        <div class="cube1"></div>
+        <div class="cube2"></div>
+      </div>
+    </div>
+  </div>
+  
+</ion-content>

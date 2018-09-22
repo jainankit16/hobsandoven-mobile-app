@@ -1,0 +1,273 @@
+<ion-header>
+  <ion-navbar>
+    <!-- <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button> -->
+    <ion-item class="feed_map_span_main">
+
+      <div class="home_main_header_div">
+        <div menuToggle class="side_menu_icon">
+          <img style="margin-top: 10px;" width="20" height="15" src="assets/img/menu.png">
+        </div>
+        <div class="main_div">
+          <div class="feed_img" (click)="feedClick()">
+            <img style="margin-top: 6px;" width="20" height="15" [src]="feedUrl" />
+          </div>
+          <div class="line">
+            <img style="margin-top: 6px;" width="1" height="17" src="assets/img/line.png" />
+          </div>
+          <div class="map_img" (click)="mapClick()">
+            <img style="margin-top: 2px;" width="20" height="21" [src]="mapUrl" />
+          </div>
+        </div>
+        <div class="sort_notification">
+          <div class="sort_div" (click)="filterClick()">
+            <img style="margin-top: 7px;" width="22" height="20" [src]="filterUrl" />
+          </div>
+          <div class="notification_div" (click)="notificationClick()">
+            <img style="margin-top: 7px;" width="20" height="24" [src]="notificationUrl" />
+          </div>
+        </div>
+      </div>
+    </ion-item>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home_main">
+  <!-- <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher> -->
+  <!-- <div *ngIf="isLoader" class="spinner_main">
+    <div class="spinner_middle">
+      <div class="spinner">
+        <div class="cube1"></div>
+        <div class="cube2"></div>
+      </div>
+    </div>
+  </div> -->
+
+  <ion-fab right middle class="circle-ripple create_meal_fab">
+    <button ion-fab color="secondary" class="pulse-button" (click)="createMeal()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <!-- <ion-fab *ngIf="cardObj.isDishCard" class="dish_card">
+
+  </ion-fab> -->
+
+  <ion-grid *ngIf="isFeed" class="feed_grid_main">
+    <ion-row *ngIf="noFeed" class="noFeed">
+      There is no feed available in your area!!
+    </ion-row>
+    <ion-row *ngFor="let row of gridData">
+      <ion-col width-50 *ngFor="let feedData of row" class="feed_col animated flipInX">
+        <ion-card (click)="feedClickFunc(feedData)" class="animated flipInX">
+          <img class="meal_image" height=150 [src]="feedData.image" />
+          <ion-card-content>
+            <ion-card-title>
+              {{feedData.meal_title}}
+            </ion-card-title>
+            <ion-grid class="meal_detail_grid">
+              <ion-row>
+                <ion-col class="width_custom">
+                  <ion-grid class="meal_detail_inner_grid">
+                    <ion-row>
+                      <div class="meal_distance_image_col">
+                        <img width="10" height="11" src="assets/img/meal_map.png" />
+                      </div>
+                      <div>{{feedData.distance}} km</div>
+                    </ion-row>
+                  </ion-grid>
+                </ion-col>
+                <ion-col class="second_custom">
+                  <ion-grid class="meal_detail_inner_grid">
+                    <ion-row>
+                      <div class="meal_time_image_col">
+                        <img width="10" height="11" src="assets/img/meal_watch.png" />
+                      </div>
+                      <div>12 timer</div>
+                    </ion-row>
+                  </ion-grid>
+                </ion-col>
+                <ion-col class="third_custom">
+                  <ion-grid class="meal_detail_inner_grid">
+                    <ion-row>
+                      <div class="meal_serving_image_col">
+                        <img width="10" height="11" src="assets/img/meal_user.png" />
+                      </div>
+                      <div>{{feedData.price_per_serving}} kr</div>
+                    </ion-row>
+                  </ion-grid>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div *ngIf="isMap" id="map_canvas">
+
+
+  </div>
+
+  <ion-grid *ngIf="isFilter" style="padding-bottom: 50px;">
+    <div style="padding:5px;">
+      <span class="filter_lbl">Vis mig</span>
+      <span class="select_all_lbl" (click)="selectAllFilters()">Vælg alt</span>
+    </div>
+    <ion-row class="filter_row1" *ngFor="let row of filterGridData">
+      <ion-col width-50 class="filterCell" *ngFor="let filterData of row" (click)="filterClicked($event,filterData)" id="filterCellHover"
+        [ngClass]="filterData.flag !=0 ? 'selected_filter' : 'unselected_filter'">
+        {{filterData.category_name}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="show_fewer_col" (click)="showFewer()">
+        Vis færre
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="isShowFewer">
+      <div style="padding:5px;margin-bottom: 10px;">
+        <span class="filter_lbl">Kost- og ernærings informationer
+        </span>
+      </div>
+      <ion-item *ngFor="let data of filterData.result.more" style="border-top: 0.55px solid #eff3f3 !important;" class="fiter_diet_togle">
+        <ion-label>{{data.filter_name}}</ion-label>
+        <ion-toggle value="foo" (ionChange)="moreFilterClicked(data,$event)" [checked]="data.flag == 0 ? false : true"></ion-toggle>
+      </ion-item>
+    </ion-row>
+
+  </ion-grid>
+
+  <ion-grid *ngIf="isNotification">
+    <ion-row>
+      <ion-col class="reminder_lbl">
+        Påmindelser
+      </ion-col>
+    </ion-row>
+    <ion-row class="reminder_row_unread animated bounceInUp">
+      <ion-col>
+        <span class="notification_col_text">
+          Kaspar Rastgaard har accepteret din bestilling
+        </span>
+      </ion-col>
+    </ion-row>
+    <ion-row class="reminder_row_unread animated bounceInUp">
+      <ion-col>
+        <span class="notification_col_text">
+          Du har modtaget en ny bestilling
+        </span>
+      </ion-col>
+    </ion-row>
+    <ion-row class="reminder_row_read animated bounceInUp">
+      <ion-col>
+        <span class="notification_col_text">
+          Dit måltid skal afhentes om 15 min.
+        </span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-footer class="dish_card  animated fadeInUp" *ngIf="cardObj.isDishCard">
+     
+    <button ion-button secondary  (click)="mealCardClick($event)">
+        <div bottom middle >
+
+        <ion-grid>
+
+          <ion-row justify-content-center align-items-center>
+            <div class="card_hook">
+
+            </div>
+          </ion-row>
+          <ion-row>
+            <ion-col col-4>
+              <div class="dish_card_meal_img">
+                <img [src]="cardData.image" />
+              </div>
+            </ion-col>
+            <ion-col col-8>
+              <ion-grid class="no_grid_padding">
+                <ion-row>
+                  <h3>
+                    {{cardData.meal_title}}
+                  </h3>
+                </ion-row>
+                <ion-row>
+                  <ion-grid style="margin-top:5px;" class="meal_detail_grid">
+                    <ion-row>
+                      <ion-col class="width_custom">
+                        <ion-grid class="meal_detail_inner_grid">
+                          <ion-row>
+                            <div class="meal_distance_image_col">
+                              <img width="10" height="11" src="assets/img/meal_map.png" />
+                            </div>
+                            <div class="P_text">{{cardData.distance}} km</div>
+                          </ion-row>
+                        </ion-grid>
+                      </ion-col>
+                      <ion-col class="second_custom">
+                        <ion-grid class="meal_detail_inner_grid">
+                          <ion-row>
+                            <div class="meal_time_image_col">
+                              <img width="10" height="11" src="assets/img/meal_watch.png" />
+                            </div>
+                            <div class="P_text">12 timer</div>
+                          </ion-row>
+                        </ion-grid>
+                      </ion-col>
+                      <ion-col class="third_custom">
+                        <ion-grid class="meal_detail_inner_grid">
+                          <ion-row>
+                            <div class="meal_serving_image_col">
+                              <img width="10" height="11" src="assets/img/meal_user.png" />
+                            </div>
+                            <div class="P_text">{{cardData.price_per_serving}} kr</div>
+                          </ion-row>
+                        </ion-grid>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-row>
+                <ion-row>
+                  <ion-grid style="margin-top:5px;padding-bottom:opx;padding-left:0px!important;">
+                    <ion-row>
+                      <ion-col col-3>
+                        <div class="dish_card_user_img">
+                          <img src="assets/img/man.png" />
+                        </div>
+                      </ion-col>
+                      <ion-col col-9>
+                        <ion-grid class="user_grid">
+                          <ion-row>
+                            <h3>
+                              Kesper
+                            </h3>
+                          </ion-row>
+                          <ion-row>
+                            Rating
+                          </ion-row>
+                        </ion-grid>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-row>
+              </ion-grid>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div> 
+    </button>
+  
+  </ion-footer>
+
+</ion-content>
+<ion-footer no-shadow>
+  <ion-toolbar *ngIf="isFilter" (click)="saveFilters()" position="bottom">
+    <button ion-button full>Bekræft</button>
+  </ion-toolbar>
+
+</ion-footer>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-icon (click)="backClick()" class="google_arrow_back" name="arrow-back"></ion-icon>
+      <ion-searchbar [(ngModel)]="autocomplete.input" (ionInput)="updateSearchResults()" placeholder="Search for a place"></ion-searchbar>
+      <!-- <ion-searchbar [(ngModel)]="searchInput" [showCancelButton]="true" (search)="loadSearch()"></ion-searchbar> -->
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding style="background: #f9fbfb;">
+  <ion-list [hidden]="autocompleteItems.length == 0">
+    <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
+      {{ item.description }}
+    </ion-item>
+  </ion-list>
+  <!-- <ion-list style="background:white" [hidden]="!searchResults">
+    <ion-item *ngFor="let li of searchResults" >{{li.description}}</ion-item>
+  </ion-list> -->
+</ion-content>

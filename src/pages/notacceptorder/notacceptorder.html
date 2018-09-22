@@ -1,0 +1,19 @@
+<ion-content padding padding class="sample-modal-page logout_main">
+  <ion-icon class="cross_icon" (click)="closeModel()" name="close-circle"></ion-icon>
+
+  <ion-item style="margin-top:10%;">
+    <ion-label class="logout_lbl">Annuller ordre?</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Er du sikker på at du vil annullere ordren?</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label (click)="notCacel()" class="delete_account_lbl">Nej, annuller ikke ordre</ion-label>
+  </ion-item>
+
+  <ion-toolbar position="bottom">
+    <button class="btn_logout" (click)="yes()" ion-button full>Ja</button>
+  </ion-toolbar>
+</ion-content>

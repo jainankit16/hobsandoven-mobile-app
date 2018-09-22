@@ -1,0 +1,56 @@
+page-addnutritioninfo {
+    .footer .button-ios{
+        margin-bottom: 0px!important;
+        background-color: #16d36e!important;
+        height: 50px!important;
+    }
+    .footer .toolbar-ios{
+        padding: 0px!important;
+    }
+    .footer .toolbar-md{
+        padding: 0px!important;
+    }
+    .footer .button-md{
+        margin-bottom: 0px!important;
+        background-color: #16d36e!important;
+        height: 50px!important;
+        text-transform: none;
+    }
+    .card_main{
+        border-radius: 5%;
+        height: 200px; 
+        border-top: 1px solid #eff3f3;
+        border-left: 1px solid #eff3f3;
+    }
+    .card_main ion-label{
+        margin: 0px;
+    }
+    .card_main ion-input{
+        height: 20px;
+    }
+    .card_main input{
+        margin: 0px;
+    }
+    .card_main ion-card-content{
+        padding: 0px;
+    }
+    .card_main ion-row{
+      height: 40px;
+      line-height: 30px;
+      border-bottom: 1px solid #eff3f3;
+    }
+    .card_main ion-grid{
+        padding: 0px;
+    }
+    .card_main ion-col{
+        border-right: 1px solid #eff3f3;
+    }
+    .card_main ion-label{
+        font-size: 13px;
+        margin-left:10px;
+    }
+    .toolbar-background{
+        background-color: #fff0;
+    }
+    
+}

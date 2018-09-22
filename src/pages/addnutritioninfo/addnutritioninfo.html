@@ -1,0 +1,78 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Opret måltid</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background: #f9fbfb;">
+
+  <div class="middle_content">
+    <div class="center_content">
+      <div style="width:100%;height: auto;margin-left: 16px;margin-top: 45px;margin-bottom: 45px;margin-right: 16px;">
+        <ion-label style="font-size: 17px;font-weight: bold;">Tilføj ernæringsinfo</ion-label>
+      </div>
+      <ion-list>
+        <ion-card class="card_main animated flipInX">
+          <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <ion-col col-4>
+
+                </ion-col>
+                <ion-col col-8>
+                  <ion-label>Pr. 100 g.</ion-label>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col col-4>
+                  <ion-label>Kalorier</ion-label>
+                </ion-col>
+                <ion-col col-8>
+                  <ion-input type="number" maxlength="5" [(ngModel)]="nutritions.calories" placeholder="Kcal"></ion-input>
+
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col col-4>
+                  <ion-label>Fedt</ion-label>
+                </ion-col>
+                <ion-col col-8>
+                  <ion-input type="number" maxlength="5" [(ngModel)]="nutritions.fat" placeholder="g."></ion-input>
+
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col col-4>
+                  <ion-label>Kulhydrat</ion-label>
+                </ion-col>
+                <ion-col col-8>
+                  <ion-input type="number" maxlength="5" [(ngModel)]="nutritions.carbohydrates" placeholder="g."></ion-input>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col col-4>
+                  <ion-label>Protein</ion-label>
+                </ion-col>
+                <ion-col col-8>
+                  <ion-input type="number" maxlength="5" [(ngModel)]="nutritions.proteins" placeholder="g."></ion-input>
+
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-list>
+    </div>
+  </div>
+
+
+</ion-content>
+<ion-footer (click)="submitClickFunc()" no-shadow>
+  <ion-toolbar position="bottom">
+    <button ion-button full>Næste</button>
+  </ion-toolbar>
+</ion-footer>

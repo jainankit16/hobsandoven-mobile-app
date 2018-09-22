@@ -1,0 +1,23 @@
+<ion-content padding padding class="sample-modal-page logout_main">
+  <ion-icon class="cross_icon" (click)="closeModel()" name="close-circle"></ion-icon>
+
+  <ion-item style="margin-top:10%;">
+    <ion-label class="logout_lbl">Ordre annulleres</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Giv venligst en begrundelse til annuleringen </ion-label>
+  </ion-item>
+
+  <ion-item class="cancel_reason">
+    <ion-input type="text" [(ngModel)]="cancelOrderParam.reason" placeholder="Skriv noget her ..."></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label (click)="notCacel()" class="delete_account_lbl">Nej, annuller ikke ordre</ion-label>
+  </ion-item>
+
+  <ion-toolbar position="bottom">
+    <button class="btn_logout" (click)="cancelOrder()" ion-button full>Annuller</button>
+  </ion-toolbar>
+</ion-content>

@@ -1,0 +1,246 @@
+page-login {
+    .button{
+        border-radius:15px;
+        font-size:16px;
+    }
+
+    .button.button-royal{
+        background-color:#336699;
+        color:#fff;
+    }
+    ion-list{
+        text-align: center;
+    }
+    .btn-label{
+        width: 30%;
+        font-size: 20px;
+        display: inline-block;           
+    }
+    .btn-label-signup{
+        // margin: 100px -10px 11px 10px;
+        margin: 100px 9px 12px -4px;
+    }
+    .isSelected{
+        color:#000000;
+        font-weight: bold;
+    }
+    .noSelected{
+        color:#E7E9E9;
+    }
+
+
+
+      .checkbox-md .checkbox-icon{
+        border-width: 1px;
+        border-radius: 50%;
+        height:16px;
+        width:16px;
+      }
+
+      .btn-facebook{
+        margin-top: 20px;
+        text-align: center;
+        // font-family: 'Roboto-Regular';
+        display: block;
+        width: 100%;
+        padding: 6px 12px;
+        position: relative;
+        font-size: 14px;
+        color: rgb(255, 255, 255);
+        line-height: 1.2;
+        border-radius: 12px;
+        height: 50px;
+        line-height: 30px;
+        background-color: rgb(51, 102, 153);
+        box-shadow: 0px 9px 13px 0px rgba(51, 102, 153, 0.35);
+        text-transform: none;
+      }
+      .btn-facebook-copy{
+        margin-top: 20px;
+        text-align: center;
+        // font-family: 'Roboto-Regular';
+        display: block;
+        width: 100%;
+        padding: 6px 12px;
+        position: relative;
+        font-size: 14px;
+        color: rgb(255, 255, 255);
+        line-height: 1.2;
+        border-radius: 12px;
+        height: 50px;
+        line-height: 30px;
+        text-transform: none;
+      }
+      .facebook-image{
+          background: none;
+          position: absolute;
+          left: 14px;
+          min-width: inherit;
+          min-height: inherit; 
+          width:15px;
+          height:29px; 
+      }
+      .login-signup-main{
+        padding: 0px 20px;
+      }
+
+      .custom-field{
+          padding-left: 0px;
+          background-color: #f9fbfb;
+          border-top: 0px!important;
+      }
+      .custom-field .item-inner{
+           border-bottom: 0px!important;
+           padding-right: 0px;
+            
+      }
+      .custom-field .item-inner input{
+        text-align: center;
+        line-height: 35px;
+        border-bottom:0px!important;
+        border: 0px;
+        text-align: center;
+        outline: none;
+        border-radius: 12px;
+        padding-bottom: 10px;
+        background-color: white;
+        -webkit-box-shadow: 0px 9px 13px 0px rgba(227, 228, 228, 0.35);
+        box-shadow: 0px 9px 13px 0px rgba(227, 228, 228, 0.35);
+        display: block;
+        width: 100%;
+        height: 50px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-image: none;
+        margin:0px 0px 10px 0px;
+        -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+      }
+
+      .forgot_lbl{
+        color: #e9ebeb;
+      }
+      .or_lbl{
+        margin: 17px auto;
+        color: #e9ebeb
+      }
+      .checkbox-icon {
+        // box-shadow: 0px 9px 13px 0px rgba(227, 228, 228, 0.35);
+        box-shadow: 0px 6px 8px 0px rgba(150, 150, 150, 0.25);
+        // border-width:0px!important;
+
+    }
+    .checkbox_item{
+        border-bottom:none!important;
+        background-color: #f9fbfb!important;
+        padding-left: 0px!important
+    }
+    .custom-checkbox {
+        // .icon {
+        //   font-size: 20px;
+        //   position: absolute;
+        //   left: 16px;
+        // }
+        // i.checkbox-icon {
+        //   display: none;
+        // }
+        margin: 8px 4px 8px 2px!important;
+
+      }
+      .checkbox-checked {
+        border-color: #32DB64;
+        background-color: #32DB64;
+    }
+    .checkbox-ios .checkbox-checked{
+        background-color: #32DB64;
+    }
+    .checkbox-md .checkbox-checked{
+        background-color: #32DB64;
+    }
+    .item-md.item-input.item-input-has-focus .item-inner, .item-md.item-input.input-has-focus .item-inner {
+    
+        box-shadow: none;
+    }
+    .custom-field .item-inner{
+        box-shadow: none!important; 
+    }
+    .custom-checkbox .checkbox-icon{
+        border-color: #fffdfd;
+    }
+    .custom_label_terms{
+        margin-left: 2px;
+        margin-right: 2px;
+        overflow: visible;
+        font-size: 12px;
+        flex: 0!important;
+    }
+    .lbl_grey{
+        color: #969696;
+    }
+
+
+//forgot css
+.button_submit{
+    text-align:center;
+       font-family: 'Roboto-Regular';
+       display: block;
+       width: 100%;
+       padding: 6px 12px;
+       position:relative;
+       font-size: 12px;
+       color: rgb(255, 255, 255);
+       line-height: 1.2;
+       border-radius: 12px;
+       height:50px;
+       line-height:30px;
+        background-color: rgb(22, 211, 110);
+      box-shadow: 0px 4px 12.61px 0.39px rgba(13, 100, 54, 0.45);
+  }
+  .button-ios.activated{
+    background-color: #009a48;
+  }
+  .button-md.activated{
+    background-color: #009a48;
+  }
+
+  ion-label{
+    overflow: initial!important;
+  }
+ 
+
+.login_main_btn{
+  overflow-x: auto;
+  width: 100%;
+  overflow-y: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+
+}
+// .login_main_btn_open{
+//     position: relative!important;
+//   }
+
+.slides_height{
+    min-height: 512px;
+    height: 512px;
+}
+.slide-zoom {   
+    top: 0;
+    position: absolute;
+}
+
+.terms_click_btn{
+    position: relative;
+    z-index: 1051;
+}
+///////////////
+
+////////////////
+}
